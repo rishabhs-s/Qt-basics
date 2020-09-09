@@ -22,6 +22,9 @@ void MainWindow::on_login_clicked()
 
     if (username =="rishabh" && password =="rishabh"){
           QMessageBox::information(this,"Successfull","Username and password correct");
+          hide();
+          dialog=new Dialog(this);
+          dialog ->show();
     }
      else
     {

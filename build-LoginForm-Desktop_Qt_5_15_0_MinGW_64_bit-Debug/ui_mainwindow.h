@@ -17,6 +17,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -27,8 +28,10 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QLabel *label_3;
     QWidget *widget;
+    QVBoxLayout *verticalLayout_5;
+    QVBoxLayout *verticalLayout_3;
+    QLabel *label_3;
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
@@ -38,6 +41,10 @@ public:
     QLabel *label_2;
     QLineEdit *password;
     QPushButton *login;
+    QSpacerItem *verticalSpacer;
+    QVBoxLayout *verticalLayout_4;
+    QLabel *label_4;
+    QPushButton *signup;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -48,14 +55,21 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        label_3 = new QLabel(centralwidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
         widget = new QWidget(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(270, 170, 208, 94));
-        verticalLayout_2 = new QVBoxLayout(widget);
+        widget->setGeometry(QRect(270, 60, 212, 228));
+        verticalLayout_5 = new QVBoxLayout(widget);
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        verticalLayout_5->setContentsMargins(0, 0, 0, 0);
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        label_3 = new QLabel(widget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        verticalLayout_3->addWidget(label_3);
+
+        verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
@@ -96,6 +110,31 @@ public:
 
         verticalLayout_2->addWidget(login);
 
+
+        verticalLayout_3->addLayout(verticalLayout_2);
+
+
+        verticalLayout_5->addLayout(verticalLayout_3);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer);
+
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        label_4 = new QLabel(widget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        verticalLayout_4->addWidget(label_4);
+
+        signup = new QPushButton(widget);
+        signup->setObjectName(QString::fromUtf8("signup"));
+
+        verticalLayout_4->addWidget(signup);
+
+
+        verticalLayout_5->addLayout(verticalLayout_4);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -117,6 +156,8 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "Username", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "password", nullptr));
         login->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "New User?", nullptr));
+        signup->setText(QCoreApplication::translate("MainWindow", "Signup", nullptr));
     } // retranslateUi
 
 };
