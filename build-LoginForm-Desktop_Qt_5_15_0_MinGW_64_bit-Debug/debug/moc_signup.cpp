@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../Minor project/project/signup.h"
+#include "../../../../Minor project - Copy/Minor/project/signup.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Signup_t {
     QByteArrayData data[3];
-    char stringdata0[30];
+    char stringdata0[26];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,11 +33,11 @@ struct qt_meta_stringdata_Signup_t {
 static const qt_meta_stringdata_Signup_t qt_meta_stringdata_Signup = {
     {
 QT_MOC_LITERAL(0, 0, 6), // "Signup"
-QT_MOC_LITERAL(1, 7, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(2, 29, 0) // ""
+QT_MOC_LITERAL(1, 7, 17), // "on_signup_clicked"
+QT_MOC_LITERAL(2, 25, 0) // ""
 
     },
-    "Signup\0on_pushButton_clicked\0"
+    "Signup\0on_signup_clicked\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -69,7 +69,7 @@ void Signup::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         auto *_t = static_cast<Signup *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_pushButton_clicked(); break;
+        case 0: _t->on_signup_clicked(); break;
         default: ;
         }
     }

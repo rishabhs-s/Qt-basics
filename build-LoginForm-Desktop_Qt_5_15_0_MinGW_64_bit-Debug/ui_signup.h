@@ -24,22 +24,23 @@ class Ui_Signup
 public:
     QVBoxLayout *verticalLayout;
     QLabel *label;
-    QLineEdit *lineEdit;
+    QLineEdit *first;
     QLabel *label_2;
-    QLineEdit *lineEdit_2;
+    QLineEdit *last;
     QLabel *label_3;
-    QLineEdit *lineEdit_4;
+    QLineEdit *email;
     QLabel *label_4;
-    QLineEdit *lineEdit_3;
+    QLineEdit *password;
     QLabel *label_5;
-    QLineEdit *lineEdit_5;
-    QPushButton *pushButton;
+    QLineEdit *age;
+    QPushButton *signup;
 
     void setupUi(QDialog *Signup)
     {
         if (Signup->objectName().isEmpty())
             Signup->setObjectName(QString::fromUtf8("Signup"));
-        Signup->resize(400, 300);
+        Signup->resize(725, 598);
+        Signup->setAutoFillBackground(true);
         verticalLayout = new QVBoxLayout(Signup);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         label = new QLabel(Signup);
@@ -47,55 +48,57 @@ public:
 
         verticalLayout->addWidget(label);
 
-        lineEdit = new QLineEdit(Signup);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        first = new QLineEdit(Signup);
+        first->setObjectName(QString::fromUtf8("first"));
 
-        verticalLayout->addWidget(lineEdit);
+        verticalLayout->addWidget(first);
 
         label_2 = new QLabel(Signup);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
         verticalLayout->addWidget(label_2);
 
-        lineEdit_2 = new QLineEdit(Signup);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        last = new QLineEdit(Signup);
+        last->setObjectName(QString::fromUtf8("last"));
 
-        verticalLayout->addWidget(lineEdit_2);
+        verticalLayout->addWidget(last);
 
         label_3 = new QLabel(Signup);
         label_3->setObjectName(QString::fromUtf8("label_3"));
 
         verticalLayout->addWidget(label_3);
 
-        lineEdit_4 = new QLineEdit(Signup);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        email = new QLineEdit(Signup);
+        email->setObjectName(QString::fromUtf8("email"));
 
-        verticalLayout->addWidget(lineEdit_4);
+        verticalLayout->addWidget(email);
 
         label_4 = new QLabel(Signup);
         label_4->setObjectName(QString::fromUtf8("label_4"));
 
         verticalLayout->addWidget(label_4);
 
-        lineEdit_3 = new QLineEdit(Signup);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        password = new QLineEdit(Signup);
+        password->setObjectName(QString::fromUtf8("password"));
+        password->setFrame(true);
+        password->setEchoMode(QLineEdit::Password);
 
-        verticalLayout->addWidget(lineEdit_3);
+        verticalLayout->addWidget(password);
 
         label_5 = new QLabel(Signup);
         label_5->setObjectName(QString::fromUtf8("label_5"));
 
         verticalLayout->addWidget(label_5);
 
-        lineEdit_5 = new QLineEdit(Signup);
-        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
+        age = new QLineEdit(Signup);
+        age->setObjectName(QString::fromUtf8("age"));
 
-        verticalLayout->addWidget(lineEdit_5);
+        verticalLayout->addWidget(age);
 
-        pushButton = new QPushButton(Signup);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        signup = new QPushButton(Signup);
+        signup->setObjectName(QString::fromUtf8("signup"));
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(signup);
 
 
         retranslateUi(Signup);
@@ -109,9 +112,9 @@ public:
         label->setText(QCoreApplication::translate("Signup", "First Name", nullptr));
         label_2->setText(QCoreApplication::translate("Signup", "Last Name", nullptr));
         label_3->setText(QCoreApplication::translate("Signup", "Email", nullptr));
-        label_4->setText(QCoreApplication::translate("Signup", "Address", nullptr));
+        label_4->setText(QCoreApplication::translate("Signup", "password", nullptr));
         label_5->setText(QCoreApplication::translate("Signup", "Age", nullptr));
-        pushButton->setText(QCoreApplication::translate("Signup", "signup", nullptr));
+        signup->setText(QCoreApplication::translate("Signup", "signup", nullptr));
     } // retranslateUi
 
 };
